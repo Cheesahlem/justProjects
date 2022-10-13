@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>D'Art</title>
+
+	<style type="text/css">
+		
+		* {
+			padding: 0;
+			margin: 0;
+		}
+
+		body {
+			min-height: 100vh;
+			background: black;
+		}
+
+		nav {
+			background-image: url('art.png');
+			background-position: center;
+			width: 100%;
+			text-align: center;
+			color: white;
+		}
+
+		nav div {
+			background: rgba(15, 9, 79, 0.8);
+			backdrop-filter: blur(7px);
+			padding: 20px;
+		}
+
+		nav h2 {
+			margin-bottom: 40px;
+			padding: 20px;
+			font-size: 40px;
+			font-family: sans-serif;
+		}
+
+		nav p {
+			font-size: 20px;
+			font-style: italic;
+			margin-bottom: 10px;
+		}
+
+		#nav-input {
+			display: flex;
+			justify-content: center;
+			align-content: center;
+		}
+
+		#nav-input input {
+			padding: 10px;
+			/*width: 25%;*/
+		}
+
+		#nav-input button {
+			padding: 10px;
+			color: white;
+			background-color:#e25353;
+			border: none;
+		}
+
+		div#info {
+			font-family: sans-serif;
+			color: white;
+			margin: 40px;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		#info-content {
+			width: 65%;
+			margin-left: inherit;
+		}
+
+		div#info1 h2 {
+			font-size: 25px;
+			text-transform: uppercase;
+			padding: 20px 0;
+		}
+
+		p.paragraph {
+			font-size: 14px;
+			width: 40%;
+			padding: 10px;
+			line-height: 23px;
+			margin-right: 20px;
+		}
+	
+		form {
+			margin: 30px auto;
+			padding: 50px;
+			border-top-left-radius: 100px;
+			border-bottom-right-radius: 100px;
+			border: 1px solid whitesmoke;
+			width: 85%;
+		}
+
+		div#info2 {
+			width: 100%;
+		}
+
+		h4 {
+			font-size: 15px;
+			color: #ff7878;
+			text-align: center;
+			padding-bottom: 20px;
+		}
+
+		label {
+			font-size: 16px;
+		}
+
+		div.input-group {
+			color: white;
+			font-size: 18px;
+			margin: 10px 0;
+		}
+
+		.input-group input {
+			width: 100%;
+			padding: 15px;
+			border: 2px solid #ff7878;
+		}
+
+		div.input-group p {
+			visibility: hidden;
+			font-size: 13px;
+			color: red;
+		}
+
+		#info2 .button {
+			text-align: center;
+		}
+
+		#info2 .btn {
+			color: #ff7878;
+			background-color: #1a0d7b ;
+			width: 50%;
+			text-align: center;
+			padding: 10px;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+
+		.images {
+			display: grid;
+			width: 27%;
+		}
+
+		.images img {
+			width: 300px;
+			height: 250px;
+			border: 2px solid white;
+		}
+
+		/*This is for the javascript class*/
+		.success input {
+			border: 3px solid green;
+		}
+
+		.error input {
+			border: 3px solid red;
+		}
+
+		.error p {
+			visibility: visible;
+			color: red;
+		}
+
+
+
+		@media screen and (max-width: 900px) {
+			
+			div#info1-par {
+				flex-direction: column;
+			}
+
+			div#info {
+				justify-content: center;
+			}
+
+			p.paragraph {
+				width: 100%;
+				margin: 10px 0;
+			}
+
+			.images {
+				display: flex;
+				justify-content: center;
+			}
+
+			.images img {
+				width: 170px;
+				height: 165px;
+			}
+
+			#info-content {
+				margin-left: auto;
+			    position: absolute;
+			    top: 560px;
+			    width: 75%;
+			}		
+		}
+
+		@media screen and (max-width: 480px) {
+
+			#nav-input {
+				flex-direction: column;
+			}
+
+			#nav-input input {
+				text-align: center;
+			}
+
+			div#info {
+				margin: 20px;
+				justify-content: center;
+			}
+
+			#info-content {
+				margin-left: none;
+				width: 75%;
+			}
+
+			div#info1-par {
+				flex-direction: column;
+			}
+
+			p.paragraph {
+				width: 100%;
+				margin: 10px 0;
+			}
+
+			div#info2 {
+				margin: 30px auto;
+			}
+
+			form {
+				margin: auto;
+				padding: 0;
+				border: none;
+			}
+
+			.images img {
+				width: 140px;
+				height: 135px;
+			}
+		}
+
+	</style>
+</head>
+<body>
+
+	<nav>
+		<div id="nav-div">
+			<h2 id="heading">D'ART</h2>
+
+			<p>We help you transform your beautiful imaginations to reality</p>
+			<p>Feel free to explore our page to see our services</p>
+		</div>
+
+		<div id="nav-input">
+			<input type="email" placeholder="Input your email address" name="email">
+			<button>Login</button>
+		</div>
+	</nav>
+
+	<div id="info">
+
+		<div id="info-content" >
+
+		<div id="info1">
+
+			<h2>There's a lot of Effort put into Art making</h2>
+	
+				<div id="info1-par" style="display: flex;">
+					<p class="paragraph par1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<p class="paragraph par2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum .  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+					<p class="paragraph par2">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum .  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+				</div>
+		</div>
+
+		<div id="info2">
+			
+			<form id="create-acct">
+
+				<h4>Please fill in your details to get started</h4>
+				
+				<!-- EMAIL ADDRESS -->
+				<div class="input-group">
+					<label for="email">Email Address</label>
+					<input type="text" id="email" placeholder="Email address" name="email">
+					<p class="message">Message</p>
+				</div>
+
+				<!-- PASSWORD -->
+				<div class="input-group">
+					<label for="password">Password</label>
+					<input type="text" id="password" placeholder="Password" name="Password">
+					<p class="message">Message</p>
+				</div>
+
+				<!-- CONFIRM PASSWORD -->
+				<div class="input-group">
+					<label for="confirm-password">Confirm Password</label>
+					<input type="text" id="confirm-password" placeholder="Confirm Password" name="ConfirmPassword">
+					<p class="message">Message</p>
+				</div>
+
+				<div class="button">
+					<button class="btn"type="submit">Submit</button>
+				</div>
+
+			</form>
+		</div>
+	</div>
+
+		<div class="images">
+			<img src="man.jpg">
+			<img src="splash.jpg">
+			<img src="splash2.jpg">
+		</div>
+	</div>
+
+</body>
+</html>
+<!-- fas fa-check-circle -->
